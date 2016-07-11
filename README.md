@@ -41,10 +41,9 @@ Once the extension is installed, simply use it in your code by putting this in y
 
 **Examples:**
 
- 1. validateEmail() - Validates email address
+ 1. **validateEmail()** - Validates email address
  
  ```php
-   <?php
     $email = "example@mail.com";
     $validate = Yii::$app->Helpers->validateEmail($email);
     if($validate) {
@@ -52,36 +51,32 @@ Once the extension is installed, simply use it in your code by putting this in y
     } else {
        echo 'Email is not Valid!';
     }
-   ?>
    ```
    
    
-2. encodeEmail() - Encodes particular email address into HTML entities so that spam bots do not find it.
+2. **encodeEmail()** - Encodes particular email address into HTML entities so that spam bots do not find it.
  
  ```php
-   <?php
     $email = "example@mail.com";
     $encodedEmail = Yii::$app->Helpers->encode_email($email, 'Contact Me', 'class="emailencoder"');
     
     echo "You can feel free to ".$encodedEmail;
-   ?>
    ```
-3. highlight_text() - It becomes convenient for user, when he searches something and in the result he can see his keyword highlighted.
+3. **highlight_text()** - It becomes convenient for user, when he searches something and in the result he can see his keyword highlighted.
 
    ```php
-   <?php
     $text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum, augue vel finibus suscipit, erat lacus mollis urna, nec placerat nibh ex non felis. Morbi sit amet imperdiet dui. Lorem, Praesent pharetra sed orci in mollis. Pellentesque consectetur, turpis eu imperdiet feugiat, ipsum diam semper libero, eget mollis quam odio ullamcorper ligula. ";
     
     $highlighted_text = Yii::$app->Helpers->highlight_text($text, "Lorem", '#4285F4')
     
     echo'<h2>Your search results for word: <b>Lorem</b> are highlighted:</h2> <Br>';
     echo '<span>'.$highlighted_text.'</span>';
-   ?>
    ```
 
-4. truncateText() - You can truncate text and specify number of characters you want to show. It also supports >adding a sufix at the end of the truncated strings (ex: read more..)
+4. **truncateText()** - You can truncate text and specify number of characters you want to show. It also supports >adding a sufix at the end of the truncated strings (ex: read more..)
 
    ```php
+    
     $text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum, augue vel finibus suscipit, erat lacus mollis urna, nec placerat nibh ex non felis. Morbi sit amet imperdiet dui. Lorem, Praesent pharetra sed orci in mollis. Pellentesque consectetur, turpis eu imperdiet feugiat, ipsum diam semper libero, eget mollis quam odio ullamcorper ligula. ";
     
     $short_version = Yii::$app->Helpers->truncateText($text, 30, ' read more...');
@@ -89,9 +84,10 @@ Once the extension is installed, simply use it in your code by putting this in y
     echo '<div id="short_version_news">';
         echo '<span>'.$short_version.'</span>';
     echo '</div>';
+   
    ```
 
-5. cleanText() - This function clean any text by removing unwanted tags. You can use this function tu filter for example an textarea value and strip <script> , <href> or other unwanted tags in text.
+5. **cleanText()** - This function clean any text by removing unwanted tags. You can use this function to filter for example an textarea value and strip "<script> , <href>" or other unwanted tags in text.
 
  ```php
 
@@ -102,34 +98,41 @@ Once the extension is installed, simply use it in your code by putting this in y
         echo '<span>'.$comment_cleared.'</span>';
     echo '</div>';
 
-   ```
-6. generateSlug(); - This function is useful if you would like to generate clean URL Slug.
+```
+
+6. **generateSlug();** - This function is useful if you would like to generate clean URL Slug.
+
 ```php
     $post_title = "Hey this Helpers will really help you!";
     $url_slug = Yii::$app->Helpers->generateSlug($post_title); 
 
     echo "<a href='/posts/".$url_slug."'>".$post_title."</a>";
 ```
-7. getTinyurl(); - Url Shortener using TinyUrl which returns a TinyUrl short URL for provided long URL.
+
+7. **getTinyurl();** - Url Shortener using TinyUrl which returns a TinyUrl short URL for provided long URL.
+
 ```php
     $raw_url  = "https://github.com/filipajdacic";
     $tiny = Yii::$app->Helpers->getTinyurl($raw_url);
     echo $tiny;
 ```
-8. base64url_encode(); - Encodes a URL string to a Base64 URL.
+8. **base64url_encode();** - Encodes a URL string to a Base64 URL.
+
 ```php
     $url = "http://github.com/filipajdacic";
     $encoded_url = Yii::$app->Helpers->base64_encode($url);
     // output will be: aHR0cDovL2dpdGh1Yi5jb20vZmlsaXBhamRhY2lj
 ```
-9. base64url_decode(); - Decodes a Base64 URL to plain text.
+9. **base64url_decode();** - Decodes a Base64 URL to plain text.
+
 ```php
     $url = "aHR0cDovL2dpdGh1Yi5jb20vZmlsaXBhamRhY2lj";
     $decoded_url = Yii::$app->Helpers->base64_decode($url);
     // output will be: http://github.com/filipajdacic
 ```
 
-10. timeAgo(); - This function convert a date and time string into xx time ago. Give the data and time string in this format: yyyy-mm-dd hh:ii:ss and it will return you the time ago.
+10. **timeAgo();** - This function convert a date and time string into xx time ago. Give the data and time string in this format: yyyy-mm-dd hh:ii:ss and it will return you the time ago.
+
 ```php
     $post_created_on = "2016-06-11 11:04:32";
     $post_created_on_ago = Yii::$app->Helpers->timeAgo($post_created_on);
@@ -140,20 +143,23 @@ Once the extension is installed, simply use it in your code by putting this in y
     // output will be: 6 months 1 week, 23 hours, 51 minutes, 21 seconds ago
 ```
 
-11. showYoutube(); - This function replaces all YouTube link into video object (iframe).
+11. **showYoutube();** - This function replaces all YouTube link into video object (iframe).
+
 ```php
    $youtube_link = "https://www.youtube.com/watch?v=L7oo21yfl7s";
    $youtube_player = Yii::$app->Helpers->showYoutube($youtube_link);
    echo $youtube_player;
 ```
-12. showVimeo(); - This function replaces all Vimeo link into video object (iframe).
+12. **showVimeo();** - This function replaces all Vimeo link into video object (iframe).
+
 ```php
    $vimeo_link = "https://vimeo.com/ondemand/indiegamethemovie/84887593";
    $vimeo_player = Yii::$app->Helpers->showVimeo($vimeo_link);
    echo $vimeo_player;
 ```
 
-13. showGravatar(); - Get either a Gravatar URL or complete image tag for a specified email address.
+13. **showGravatar();** - Get either a Gravatar URL or complete image tag for a specified email address.
+
 ```php
   $email = "ajdasoft@gmail.com";
   $gravatar = Yii::$app->Helpers->showGravatar($email);
@@ -163,13 +169,15 @@ Once the extension is installed, simply use it in your code by putting this in y
   echo "</div>";
 ```
 
-14. showIP(); - This function get real ip address.
+14. **showIP();** - This function get real ip address.
+
 ```php
     $ip_address = Yii::$app->Helpers->showIP();
     echo "Your IP address is:".$ip_address;
 ```
 
-15. qr_code(); - This method can be used to generate a QR Code image.
+15. **qr_code();** - This method can be used to generate a QR Code image.
+
 ```php
     $link = "http://github.com/filipajdacic";
     $qr_link = Yii::$app->Helpers->qr_code($link, 'URL');
@@ -184,7 +192,7 @@ Once the extension is installed, simply use it in your code by putting this in y
     $qr_text = Yii::$app->Helpers->qr_code($text, 'TXT');
 ```
 
-16. getDistanceBetweenCordinates(); -This method can be used to calculate distance between two coordinates.
+16. **getDistanceBetweenCordinates();** -This method can be used to calculate distance between two coordinates.
 
 ```php
     $lat_1 = '44.8014766';
@@ -200,7 +208,8 @@ Once the extension is installed, simply use it in your code by putting this in y
     }
 ```
 
-17. pre_dump(); - Pretty dump.
+17. **pre_dump();** - Pretty dump.
+
 ```php
  
     $data = array("One", "Two", "Three");
