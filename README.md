@@ -100,7 +100,9 @@ Once the extension is installed, simply use it in your code by putting this in y
 
 ```
 
+
 6. **generateSlug();** - This function is useful if you would like to generate clean URL Slug.
+
 
 ```php
     $post_title = "Hey this Helpers will really help you!";
