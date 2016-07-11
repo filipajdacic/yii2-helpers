@@ -87,7 +87,7 @@ Once the extension is installed, simply use it in your code by putting this in y
    
    ```
 
-5. **cleanText()** - This function clean any text by removing unwanted tags. You can use this function to filter for example an textarea value and strip "<script> , <href>" or other unwanted tags in text.
+5. **cleanText()** - This function clean any text by removing unwanted tags. You can use this function to filter for example an textarea value and strip unwanted tags in text.
 
  ```php
 
