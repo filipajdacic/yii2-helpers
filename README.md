@@ -51,7 +51,7 @@ Once the extension is installed, simply use it in your code by putting this in y
     } else {
        echo 'Email is not Valid!';
     }
-   ```
+ ```
    
    
 2. **encodeEmail()** - Encodes particular email address into HTML entities so that spam bots do not find it.
@@ -103,10 +103,12 @@ Once the extension is installed, simply use it in your code by putting this in y
 6. **generateSlug()** - This function is useful if you would like to generate clean URL Slug.
 
 
+```php
     $post_title = "Hey this Helpers will really help you!";
     $url_slug = Yii::$app->Helpers->generateSlug($post_title); 
 
     echo "<a href='/posts/".$url_slug."'>".$post_title."</a>";
+```
 
 
 7. **getTinyurl();** - Url Shortener using TinyUrl which returns a TinyUrl short URL for provided long URL.
