@@ -100,7 +100,7 @@ Once the extension is installed, simply use it in your code by putting this in y
 
 ```
 
-
+6. **generateSlug()** - This function is useful if you would like to generate clean URL Slug.
 
 
 ```php
@@ -109,6 +109,7 @@ Once the extension is installed, simply use it in your code by putting this in y
 
     echo "<a href='/posts/".$url_slug."'>".$post_title."</a>";
 ```
+
 
 7. **getTinyurl();** - Url Shortener using TinyUrl which returns a TinyUrl short URL for provided long URL.
 
