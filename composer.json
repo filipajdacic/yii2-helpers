@@ -1,0 +1,21 @@
+{
+    "name": "filipajdacic/yii2-helpers",
+    "description": "This is a set of useful helper function in one place packed to use with Yii2 framework. It will save you a lot of time.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","helpers","truncate","validate","youtube"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filip Ajdacic",
+            "email": "ajdasoft@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "filipajdacic\\yii2helpers\\": ""
+        }
+    }
+}
